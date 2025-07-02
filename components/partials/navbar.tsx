@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "../ui/button"
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
@@ -13,7 +14,9 @@ export default function Navbar() {
             <div className="mx-auto max-w-7xl">
             <div className="flex items-center justify-between rounded-full bg-gradient-to-r from-[#134679] to-[#226DB8] px-8 py-4 shadow-lg">
                 {/* Logo */}
-                <div className="text-2xl font-bold text-white">ENT</div>
+                <Link href={'/'}>
+                    <Image src={'/ent.svg'} alt="ent.svg" width={80} height={37} />
+                </Link>
 
                 <div className="flex items-center space-x-8">
                     {/* Desktop Navigation Links */}
@@ -66,7 +69,7 @@ export default function Navbar() {
                     </Link>
                     <div className="p-4">
                     <Button className="w-full rounded-full bg-gradient-to-r from-[#134679] to-[#226DB8] text-white hover:opacity-90 py-3 font-medium">
-                        Pengajuan Liputan
+                        <Link href={'/report'}>Pengajuan Liputan</Link>
                     </Button>
                     </div>
                 </div>
