@@ -1,10 +1,4 @@
-'use client'
-
-import { useState } from "react"
-import DivisionAccordion from "./division-accordion"
-import BouncingSquares from "../animations/bouncing-square"
-
-interface DivisionItem {
+export interface DivisionItem {
     id: number
     title: string
     description: string
@@ -102,76 +96,8 @@ const accordionMobile: DivisionItem[] = [
     }
 ]
 
-export default function DivisionSection() {
-    const [activeGroup1, setActiveGroup1] = useState<number | null>(1)
-    const [activeGroup2, setActiveGroup2] = useState<number | null>(2)
-    const [activeAccordionMobile, setActiveAccordionMobile] = useState<number | null>(1)
-
-    return (
-        <section className="relative w-full min-h-screen flex flex-col items-center justify-start my-32">
-            {/* decorative components */}
-            <BouncingSquares size="lg" isMobile={false} isFlip className="left-36 top-5" />
-            <BouncingSquares size="md" isMobile={false} isFlip={false} className="right-36 top-42" />
-
-            {/* title section */}
-            <div className="flex max-md:px-5 flex-col items-center space-y-10">
-                {/* title */}
-                <h1 className="font-medium text-6xl text-center leading-snug">Let&apos;s Dive In Deeper <br />Get To Know The Divisions</h1>
-                <p className="w-full max-w-4xl text-center text-lg">
-                    To support the needs, in the ENT student unit there are divisions that will work according to their expert fields. What divisions are there in ENT? Let&apos;s find out!
-                </p>
-            </div>
-
-            {/* accordion view */}
-            <div className="mt-24 flex max-md:hidden justify-center items-center w-full gap-5">
-                {/* group1 */}
-                <div className="flex flex-col gap-y-5">
-                    {/* group1  */}
-                    {group1.map((item) => (
-                        <DivisionAccordion 
-                            key={item.id}
-                            title={item.title}
-                            description={item.description}
-                            img={item.img}
-                            icon={item.icon}
-                            isOpen={activeGroup1 === item.id}
-                            color={item.color}
-                            onToggle={() => setActiveGroup1(activeGroup1 === item.id ? null : item.id)} 
-                        />
-                    ))}
-                </div>
-                {/* group2 */}
-                <div className="flex flex-col gap-y-5">
-                    {group2.map((item) => (
-                        <DivisionAccordion 
-                            key={item.id}
-                            title={item.title}
-                            description={item.description}
-                            img={item.img}
-                            icon={item.icon}
-                            isOpen={activeGroup2 === item.id}
-                            color={item.color}
-                            onToggle={() => setActiveGroup2(activeGroup2 === item.id ? null : item.id)} 
-                        />
-                    ))}
-                </div>
-            </div>
-
-            {/* accordion mobile */}
-            <div className="mt-24 flex md:hidden flex-col justify-center items-center w-full gap-5">
-                {accordionMobile.map((item) => (
-                    <DivisionAccordion 
-                        key={item.id}
-                        title={item.title}
-                        description={item.description}
-                        img={item.img}
-                        icon={item.icon}
-                        isOpen={activeAccordionMobile === item.id}
-                        color={item.color}
-                        onToggle={() => setActiveAccordionMobile(activeAccordionMobile === item.id ? null : item.id)} 
-                    />
-                ))}
-            </div>
-        </section>
-    )
+export {
+    group1,
+    group2,
+    accordionMobile
 }

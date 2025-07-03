@@ -1,5 +1,5 @@
 import AboutSection from "@/components/partials/about-section";
-import DivisionSection from "@/components/partials/division-section";
+import DivisionSection from "@/components/partials/division/division-section";
 import Footer from "@/components/partials/footer";
 import Jumbotron from "@/components/partials/jumbotron";
 import Navbar from "@/components/partials/navbar";
