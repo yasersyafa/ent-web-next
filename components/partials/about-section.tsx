@@ -3,13 +3,14 @@
 import { motion } from 'motion/react'
 import BubbleChat from '../ui/bubble-chat'
 import Image from 'next/image'
+import Carousel from './carousel'
 
-type AboutCard = {
+export type AboutCard = {
     id: number
     photo: string
     alt: string
     description: string
-    isMiddle: boolean
+    isMiddle?: boolean
 }
 
 const aboutCardData: AboutCard[] = [
@@ -38,12 +39,12 @@ const aboutCardData: AboutCard[] = [
 
 export default function AboutSection() {
     return (
-        <div className="relative py-12 w-full flex flex-col items-center justify-evenly" id='about'>
+        <div className="relative py-5 md:py-12 w-full flex flex-col md:items-center md:justify-evenly" id='about'>
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: 'backInOut' }}
-                className='space-y-5 select-none'
+                className='space-y-5 select-none max-md:hidden'
             >
                 <h1 className='font-medium text-6xl text-center leading-snug'>Somebody Said <br />&quot;Tak Kenal Maka Tak Sayang&quot;</h1>
             </motion.div>
@@ -77,6 +78,9 @@ export default function AboutSection() {
                     </motion.div>
                 ))}
             </div>
+
+            {/* carousel for mobile */}
+            <Carousel cards={aboutCardData} />
         </div>
     )
 }
