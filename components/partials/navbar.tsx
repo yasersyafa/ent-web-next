@@ -10,7 +10,7 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)
 
     return (
-        <nav className="px-6 sticky top-6 z-20">
+        <nav className="px-6 sticky top-6 z-50">
             <div className="mx-auto max-w-7xl">
             <div className="flex items-center justify-between rounded-full bg-gradient-to-r from-[#134679] to-[#226DB8] px-8 py-4 shadow-lg">
                 {/* Logo */}
