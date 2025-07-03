@@ -21,7 +21,7 @@ export default function Jumbotron() {
         {/* mobile decorative elements */}
         <BouncingSquares isFlip={true} isMobile size={'sm'} className="right-6 top-36" />
         <BouncingSquares isFlip={true} isMobile size={'sm'} className="right-6 bottom-36" />
-        <div className="font-medium text-5xl md:text-6xl lg:text-8xl max-w-4xl md:text-center max-sm:space-y-5">
+        <div className="font-medium text-6xl md:text-6xl lg:text-8xl max-w-4xl md:text-center max-sm:space-y-5">
           <div className="group flex max-sm:flex-col md:justify-center md:items-center gap-5" onMouseEnter={() => setIsNewsHovered(true)} onMouseLeave={() => setIsNewsHovered(false)}>
             <h1>EEPIS</h1>
             <motion.h1 

@@ -18,12 +18,26 @@ export default function DivisionSection() {
             <BouncingSquares size="md" isMobile={false} isFlip={false} className="right-36 top-42" />
             <Image src={'/icons/star.svg'} alt="star.svg" width={20} height={20} className="absolute animate-spin right-5 top-5 md:hidden" />
 
+            {/* mobile section only */}
+            <div className="flex md:hidden flex-col px-5 space-y-6 mb-10">
+                <h1 className="font-medium text-4xl leading-tight">Let&apos;s Dive In Deeper</h1>
+                <p className="w-full max-w-4xl text-base text-balance">ENT is the Journalism and Network Team responsible for managing the official media accounts of Politeknik Elektronika Negeri Surabaya (PENS). It has the posibility to work for content, news, and video needs. We can help in terms of brainstorming, technical execution, to marketing publications.</p>
+            </div>
+
+            <div className="realtive md:hidden px-5 my-20">
+                {/* decorative components */}
+                <div className="absolute right-5 w-[140px] h-[87px]">
+                    <Image src={'/icons/rafa.svg'} alt="rafa.svg" fill className="object-cover rounded-full rounded-br-none" />
+                </div>
+                <h1 className="text-6xl font-medium text-pretty leading-none">Where Learning Spirit And Passion Meet</h1>
+            </div>
+
             {/* title section */}
-            <div className="flex max-md:px-5 flex-col items-center space-y-10">
+            <div className="flex max-md:px-5 flex-col items-center space-y-6 md:space-y-10">
                 {/* title */}
                 <h1 className="font-medium max-md:hidden text-6xl md:text-center leading-snug">Let&apos;s Dive In Deeper <br />Get To Know The Divisions</h1>
                 {/* title mobile resolution */}
-                <h1 className="font-medium text-4xl leading-tight">Get To Know The Divisions</h1>
+                <h1 className="font-medium text-4xl leading-tight md:hidden">Get To Know The Divisions</h1>
                 <p className="w-full max-w-4xl md:text-center text-base md:text-lg">
                     To support the needs, in the ENT student unit there are divisions that will work according to their expert fields. What divisions are there in ENT? Let&apos;s find out!
                 </p>
