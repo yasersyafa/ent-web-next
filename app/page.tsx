@@ -19,12 +19,12 @@ export default function Home() {
       {/* jumbotron */}
       <div className="flex relative md:items-center items-start max-sm:px-6 flex-col justify-evenly min-h-screen max-h- w-full select-none">
         {/* decorative elements */}
-        <BouncingSquares isMobile={false} size={'lg'} className="left-20 bottom-80" />
-        <BouncingSquares isMobile={false} size={'lg'} className="right-20 top-32" />
+        <BouncingSquares isFlip={false} isMobile={false} size={'lg'} className="left-20 bottom-80" />
+        <BouncingSquares isFlip={true} isMobile={false} size={'lg'} className="right-20 top-32" />
 
         {/* mobile decorative elements */}
-        <BouncingSquares isMobile size={'sm'} className="right-6 top-36" />
-        <BouncingSquares isMobile size={'sm'} className="right-6 bottom-36" />
+        <BouncingSquares isFlip={true} isMobile size={'sm'} className="right-6 top-36" />
+        <BouncingSquares isFlip={true} isMobile size={'sm'} className="right-6 bottom-36" />
         <div className="font-medium text-5xl md:text-6xl lg:text-8xl max-w-4xl md:text-center max-sm:space-y-5">
           <div className="group flex max-sm:flex-col md:justify-center md:items-center gap-5" onMouseEnter={() => setIsNewsHovered(true)} onMouseLeave={() => setIsNewsHovered(false)}>
             <h1>EEPIS</h1>
