@@ -17,10 +17,10 @@ const convertToTailwind = (size: 'sm' | 'md' | 'lg') => {
 
 export default function BouncingSquares({ isMobile = false, size, className } : BouncingSquareProps) {
     return (
-        <div className={`absolute ${isMobile ? 'block lg:hidden' : 'hidden lg:block'} animate-bounce ${className ?? ''}`}>
+        <div className={`absolute ${isMobile ? 'block lg:hidden' : 'hidden lg:block'} animate-pulse ${className ?? ''}`}>
             <div className="relative">
-                <div className={`${convertToTailwind(size)} bg-[#134679]`}></div>
-                <div className={`absolute -bottom-2 -right-2 ${convertToTailwind(isMobile ? size : 'md')} bg-teal-400`}></div>
+                <div className={`${convertToTailwind(size)} bg-[#134679]/90`}></div>
+                <div className={`absolute -bottom-4 -right-4 -z-10 ${convertToTailwind(isMobile ? size : 'md')} bg-teal-400/90`}></div>
             </div>
       </div>
     )
